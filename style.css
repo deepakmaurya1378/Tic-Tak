@@ -1,70 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background-color: #1e5053;
-    text-align: center;
 
-}
-.Container{
-    height: 70vh;
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #3498db, #9b59b6);
+    color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-.game{
-    height: 60vmin;
-    width: 60vmin;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5vmin;
-
-    
-}
-.box{
-    height: 18vmin;
-    width: 18vmin;
-    border-radius: 1rem;
-    border: none;
-    box-shadow:0 0 1rem rgba(0,0 green,0 blue,0.3);
-    font-size : 8vmin;
-    color: #b0413e;
-    background-color: #ffffc7;
-}
-#reset{
-    padding:1rem;
-    font-size: 1.25rem;
-    background-color: #191913;
-    color:#fff;
-    border-radius: 2rem;
-    align-items:center;
-
-}
-#newBt{
-    padding:1rem;
-    font-size: 1.25rem;
-    background-color: #191913;
-    color:#fff;
-    border-radius: 1rem;
-    align-items:center;
-
-}
-#msg{
-    color :#ffffc7;
-    font-size: 5vmin;
-}
-.msg-container{
-    height:80vmin;
-    display: flex;
-    justify-content: centre;
-    align-items: center;
     flex-direction: column;
-    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-.hide{
-    display:none;
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 10px;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.msg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1.5rem;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.msg-container.hide {
+    display: none;
+}
+
+#reset,
+#newBt {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    background: #27ae60;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#reset:hover,
+#newBt:hover {
+    background: #2ecc71;
 }
